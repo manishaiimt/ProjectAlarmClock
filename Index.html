@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <link rel ="styleSheet" type="text/css" href="style.css"/>
+
+    </head>
+    <body>
+        <div id = "Clock"></div>
+        <!--alarm container-->
+        <div class="alarm-container">
+            <h3>Set Alarm Time</h3>
+            <div class = "alarm-item">
+                <div class = "alarmhrs">
+                    <select id = 'alarmhrs'></select>
+                </div>
+                <div class = "alarmmins">
+                    <select id ='alarmmins'></select>
+                </div>
+                <div class = "alarmsecs">
+                    <select id = 'alarmsecs'></select>
+                </div>
+                <div class = "ampm">
+                    <select id = 'ampm'>
+                        <option value="AM">AM</option>
+                        <option value = "PM">PM</option>
+                    </select>
+                    
+                </div>
+            </div>
+        </div>
+        <!--Button-->
+        <div class = "ButtonHolder">
+            <div>
+                <button id = 'setButton' onclick="setAlarm()">Set Alarm</button>
+                <button id = 'clearAlarm' onclick="clearAlarm()">Clear Alarm</button>
+            </div>
+        </div>
+
+
+       <div class="alarm-container">
+            <table class="alarm-table" id="alarmTable">
+
+            </table>
+        </div>
+        
+        <script src = 'script.js'></script>
+    </body>
+</html>

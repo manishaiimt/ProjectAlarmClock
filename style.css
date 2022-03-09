@@ -1,0 +1,107 @@
+@font-face{
+    font-family: "customFont";
+    src : url("digital - 7.ttf");
+}
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+#Clock{
+    padding: 30px;
+    background: #2f94e4;
+    width : 70%;
+    margin:auto;
+    color:#fff;
+    font-size: 60px;
+    letter-spacing: 5px;
+    box-shadow: 1px 2px 13px #2f94e4, 1px 2px 23px #2f94e4, 1px 2px 33px #2f94e4;
+
+}
+
+body{
+    background-color: #fff;
+    font-family: 'customFont';
+}
+.row-alarm{
+    height: 40px;
+    width: 80px;
+    font-size: 22px;
+    border:solid;
+
+}
+.alarm-container{
+    text-align: center;
+    background: #fff;
+    padding: 20px 0;
+    width: 70%;
+    margin: auto;
+    box-shadow: 1px 2px 13px #2f94e4, 1px 2px 23px #2f94e4, 1px 2px 33px #2f94e4;
+}
+.alarm-container h3{
+    font-size: 43px;
+    letter-spacing: normal;
+    color: 2f94e4;
+}
+.alarm-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+}
+.alarm-table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+}
+.alarm-item div select{
+    height: 40px;
+    width: 80px;
+    font-size: 22px;
+
+}
+.ButtonHolder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    background: #fff;
+    margin: auto;
+    box-shadow: 1px 2px 13px #2f94e4, 1px 2px 23px #2f94e4, 1px 2px 33px #2f94e4;
+}
+
+.ButtonHolder div{
+    width: 300px;
+    display: flex;
+    padding: 20px;
+    margin: 2px 3px;
+    padding: 20px 0;
+}
+.ButtonHolder div button{
+    width: inherit;
+    height: 50px;
+    border-radius: 30px;
+    outline: none;
+    border: 1px solid #111;
+    transition: .4s ease-in-out;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button#setButton{
+    background: #2f94e4;
+    color: #fff;
+}
+button#setButton:hover{
+    background: #fff;
+    color: #2f94e4;
+}
+
+button#clearAlarm:hover{
+    background: #2f94e4;
+    color: #fff;
+}
+
