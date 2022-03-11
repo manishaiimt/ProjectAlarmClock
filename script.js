@@ -12,9 +12,9 @@ var currentTime = setInterval(function(){
 
     var ampm = 'AM';
     if(hours==00){
-        hours = 12;
+        hours = 00;
     }
-    if(hours>12){
+    if(hours>=12){
         hours = hours-12;
         ampm= 'PM';
     }
@@ -56,6 +56,7 @@ secondMenu();
 
 //Set Alarm
 window.numberOfAlarm=0;
+window.currAlarm="inactive";
 function setAlarm(){
 
     var alarmTable = document.getElementById("alarmTable");
@@ -98,14 +99,15 @@ function setAlarm(){
     setInterval(function(){
         var date = new Date();
         var hours = date.getHours();
+       // console.log("Hours is ==>"+hours);
         var mintus = date.getMinutes();
         var second = date.getSeconds();
     
         var ampm = 'AM';
         if(hours==00){
-            hours = 12;
+            hours = 00;
         }
-        if(hours>12){
+        if(hours>=12){
             hours = hours-12;
             ampm= 'PM';
         }
@@ -115,8 +117,9 @@ function setAlarm(){
         for(var i=0;i<listOfAlarm.length;i++){
             let alarmTime = listOfAlarm[i];
             //console.log(i+"-->"+almTime)
-            if(alarmTime.time== currentTime){
+            if(alarmTime.time == currentTime && window.currAlarm=="inactive"){
                 listOfAlarm[i].status="active";
+                window.currAlarm="active"
                 sound.play();
                 break;
             }
@@ -139,6 +142,7 @@ function clearAlarm(){
     }
     listOfAlarm=[];
     window.numberOfAlarm=0;
+    window.currAlarm="inactive";
     sound.pause();
 
 }
@@ -151,6 +155,7 @@ function deleteAlarm(almTime){
         if(alarmTime.time == almTime){
             if(alarmTime.status=="active"){
                 sound.pause();
+                window.currAlarm="inactive";
             }
             listOfAlarm.splice(i,1);
             console.log(listOfAlarm);

@@ -94,10 +94,14 @@ body{
 button#setButton{
     background: #2f94e4;
     color: #fff;
+    margin-right: 10px;
 }
 button#setButton:hover{
     background: #fff;
     color: #2f94e4;
+}
+button#clearAlarm{
+    margin-left: 10px;
 }
 
 button#clearAlarm:hover{
